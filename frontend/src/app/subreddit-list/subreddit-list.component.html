@@ -1,0 +1,10 @@
+<div class="container mt-3">
+  <h1>Lista de Subreddits</h1>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let subreddit of subreddits">
+      <a [attr.href]="'/subreddit/' + subreddit.id">
+        {{ subreddit.display_name }}
+      </a>
+    </li>
+  </ul>
+</div>
