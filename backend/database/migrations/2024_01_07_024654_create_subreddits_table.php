@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('subreddits', function (Blueprint $table) {
             $table->string('id')->primary();  // Cambiar a VARCHAR y definir como clave primaria
+            $table->text('title');
             $table->string('display_name');
             $table->integer('subscribers');
-            $table->text('description');
-            $table->text('url_detail');
+            $table->text('public_description');
+            $table->text('icon_img');
             $table->timestamps();
         });
     }

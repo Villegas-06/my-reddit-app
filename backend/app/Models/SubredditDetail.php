@@ -13,5 +13,8 @@ class SubredditDetail extends Model
 
     public $timestamps = true;
 
-    protected $fillable = ['id', 'subreddit_id', 'public_description_html', 'description', 'banner_img'];
+    protected $fillable = ['id', 'subreddit_id',
+                            'title', 'subscribers', 'display_name',
+                            'submit_text', 'banner_img', 'icon_img',
+                            'community_icon', 'public_description', 'description'];
 }

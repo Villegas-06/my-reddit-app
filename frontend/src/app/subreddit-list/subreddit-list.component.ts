@@ -6,8 +6,9 @@ interface Subreddit {
   id: string;
   display_name: string;
   subscribers: number;
-  description: string;
-  url_detail: string;
+  public_description: string;
+  title: string;
+  icon_img: string;
   created_at: string;
   updated_at: string;
 }
@@ -29,7 +30,6 @@ export class SubredditListComponent implements OnInit {
       .get<Subreddit[]>('http://localhost:8000/api/reddit-topics')
       .subscribe((data) => {
         this.subreddits = data;
-        console.log(this.subreddits);
       });
   }
 }

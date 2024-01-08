@@ -13,7 +13,7 @@ class Subreddit extends Model
 
     public $timestamps = true;
 
-    protected $fillable = ['id', 'display_name', 'subscribers', 'description', 'url_detail'];
+    protected $fillable = ['id', 'title', 'display_name', 'subscribers', 'public_description', 'icon_img'];
 
 
 }

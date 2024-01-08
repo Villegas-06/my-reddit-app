@@ -18,19 +18,27 @@ class RedditController extends Controller
             $subreddit = Subreddit::updateOrCreate(
                 ['id' => $child['data']['id']],
                 [
+                    'title' => $child['data']['title'],
                     'display_name' => $child['data']['display_name'],
                     'subscribers' => $child['data']['subscribers'],
-                    'description' => $child['data']['public_description'],
-                    'url_detail' => $child['data']['url'],
+                    'icon_img' => $child['data']['icon_img'],
+                    'public_description' => $child['data']['public_description'],
                 ]
             );
 
             SubredditDetail::updateOrCreate(
                 ['subreddit_id' => $child['data']['id']],
                 [
-                    'public_description_html' => $child['data']['public_description_html'],
+                    'title' => $child['data']['title'],
+                    'subscribers' => $child['data']['subscribers'],
+                    'display_name' => $child['data']['display_name'],
+                    'icon_img' => $child['data']['icon_img'],
+                    'submit_text' => $child['data']['submit_text'],
+                    'banner_img' => $child['data']['banner_background_image'],
+                    'community_icon' => $child['data']['icon_img'],
+                    'public_description' => $child['data']['public_description'],
                     'description' => $child['data']['description'],
-                    'banner_img' => $child['data']['banner_img'],
+
                 ]
             );
         }

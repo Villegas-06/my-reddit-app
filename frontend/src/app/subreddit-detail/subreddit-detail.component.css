@@ -1,0 +1,22 @@
+.subreddit-detail-title {
+  text-align: center;
+  font-size: 40px;
+  color: #6a6a6a;
+  margin-top: 100px;
+  font-weight: 100;
+}
+
+.subreddit-detail-card {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.subreddit-detail-card-content {
+  margin-top: 20px;
+}

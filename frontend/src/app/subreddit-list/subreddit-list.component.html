@@ -1,10 +1,17 @@
-<div class="container mt-3">
-  <h1>Lista de Subreddits</h1>
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let subreddit of subreddits">
-      <a [attr.href]="'/subreddit/' + subreddit.id">
-        {{ subreddit.display_name }}
+<div class="subrredit-container">
+  <h1 class="subreddit-title">Lista de Subreddits</h1>
+  <div class="subreddit-container">
+    <div class="subreddit-card" *ngFor="let subreddit of subreddits">
+      <img
+        *ngIf="subreddit.icon_img"
+        [attr.src]="subreddit.icon_img"
+        [attr.alt]="subreddit.display_name"
+      />
+      <h4>{{ subreddit.title }}</h4>
+      <p>{{ subreddit.public_description }}</p>
+      <a class="subreddit-card-link" [attr.href]="'/subreddit/' + subreddit.id">
+        Leer mas...
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
