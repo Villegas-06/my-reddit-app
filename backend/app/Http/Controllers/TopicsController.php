@@ -27,7 +27,7 @@ class TopicsController extends Controller
 
             $topic_detail = SubredditDetail::where('subreddit_id', $topic_id)->get();
 
-            return $topic_detail;
+            return $topic_detail[0];
 
         }catch(\Execption $e){
             return response()->json(['error' => 'Error al obtener el detalle.'], 500);
