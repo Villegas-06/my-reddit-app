@@ -11,7 +11,7 @@ class SubredditDetail extends Model
 
     protected $table = 'subreddit_details';
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     protected $fillable = ['id', 'subreddit_id', 'public_description_html', 'description', 'banner_img'];
 }

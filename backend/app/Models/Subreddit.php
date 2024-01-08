@@ -11,7 +11,7 @@ class Subreddit extends Model
 
     protected $table = 'subreddits';
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     protected $fillable = ['id', 'display_name', 'subscribers', 'description', 'url_detail'];
 

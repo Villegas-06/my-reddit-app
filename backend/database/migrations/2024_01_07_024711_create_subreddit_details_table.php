@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('subreddit_details', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('subreddit_id');
+            $table->string('subreddit_id');
             $table->foreign('subreddit_id')->references('id')->on('subreddits')->onDelete('cascade');
             $table->text('public_description_html')->nullable();
             $table->text('description')->nullable();
